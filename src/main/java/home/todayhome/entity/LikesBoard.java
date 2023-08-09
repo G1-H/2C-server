@@ -9,11 +9,12 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import java.time.Instant;
+import java.time.LocalDateTime;
 
 @Getter
 @Setter
 @Entity
-@Table(name = "`likes-board`")
+@Table(name = "likes-board")
 public class LikesBoard {
     @Id
     @Column(name = "id", nullable = false)
@@ -29,10 +30,10 @@ public class LikesBoard {
 
     @NotNull
     @Column(name = "created_at", nullable = false)
-    private Instant createdAt;
+    private LocalDateTime createdAt;
 
     @Column(name = "modified_at")
-    private Instant modifiedAt;
+    private LocalDateTime modifiedAt;
 
     @Column(name = "is_deleted")
     private Boolean isDeleted;

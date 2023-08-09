@@ -7,6 +7,7 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.time.Instant;
+import java.time.LocalDateTime;
 
 @Getter
 @Setter
@@ -41,10 +42,10 @@ public class Board {
 
     @NotNull
     @Column(name = "created_at", nullable = false)
-    private Instant createdAt;
+    private LocalDateTime createdAt;
 
     @Column(name = "moidified_at")
-    private Instant moidifiedAt;
+    private LocalDateTime moidifiedAt;
 
     @NotNull
     @Column(name = "is_deleted", nullable = false)
